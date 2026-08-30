@@ -28,3 +28,6 @@
   .career-place{font-size:.68rem}
   .career-content li{font-size:.66rem}
 }
+/* Certifications & social alignment refinement */
+.cert-body{text-align:center}.cert-date{justify-content:center}.cert-date span{display:none}.cert-date strong{font-weight:900}.cert-image-link:after{display:none}.social-links{justify-content:center}.social-link{direction:ltr}
+@media(max-width:560px){.cert-body{text-align:center}.cert-date{justify-content:center}.cert-date span{display:none}.social-links{justify-content:center}.social-link{justify-content:center;direction:ltr}.social-link .social-icon{order:-1}}
