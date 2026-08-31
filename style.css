@@ -160,10 +160,7 @@ body:before{
   letter-spacing:-.065em;
   font-weight:950;
   margin:0 0 16px;
-  color:#ef7614
-}
-.subtitle{
-  font-size:clamp(.95rem,1.6vw,1.15rem);
+  color:var(--text);
   color:var(--text);
   font-weight:850;
   margin-bottom:18px;
@@ -172,7 +169,7 @@ body:before{
   padding-bottom:18px
 }
 .subtitle:after{
-  display:none
+  display:none;
 }
 .intro{
   max-width:610px;
