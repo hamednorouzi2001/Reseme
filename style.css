@@ -1557,3 +1557,9 @@ footer{
   .cert-institute { font-size: .72rem; }
   .cert-date { margin-top: 14px; padding-top: 12px; }
 }
+
+
+#certifications .certificate-info {
+  padding: 21px 22px 23px;
+  text-align: center;
+}
