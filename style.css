@@ -1468,3 +1468,29 @@ footer{
 
 /* Certifications */
 .certifications-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:34px}.cert-card{overflow:hidden;background:var(--panel2);border:1px solid var(--line);border-radius:22px;box-shadow:0 12px 35px rgba(0,0,0,.06);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}.cert-card:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--accent) 45%,var(--line));box-shadow:0 18px 45px rgba(0,0,0,.1)}.cert-image-link{display:block;position:relative;background:var(--bg);padding:18px;border-bottom:1px solid var(--line);overflow:hidden}.cert-image-link:after{display:none}.cert-image-link img{display:block;width:100%;height:260px;object-fit:contain;border-radius:12px}.cert-body{padding:22px 24px 24px;text-align:center!important;direction:ltr}.cert-body .cert-type,.cert-body h3,.cert-body .cert-institute,.cert-body .cert-date{display:block;width:100%;text-align:center!important}.cert-type{display:inline-block;color:var(--accent);font-size:.62rem;letter-spacing:.14em;font-weight:950;margin-bottom:7px}.cert-body h3{font-size:1.2rem;line-height:1.5;margin-bottom:5px;font-weight:950;color:var(--text)}.cert-institute{color:var(--muted);font-size:.78rem;line-height:1.8;min-height:28px}.cert-date{display:flex!important;align-items:center;justify-content:center;gap:15px;margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:.7rem}.cert-date span{display:none}.cert-date strong{color:var(--accent);font-weight:900;direction:ltr}@media(max-width:700px){.certifications-grid{grid-template-columns:1fr;gap:18px;margin-top:25px}.cert-image-link{padding:13px}.cert-image-link img{height:auto;max-height:300px}.cert-image-link:after{display:none}.cert-body{padding:18px}.cert-body h3{font-size:1.02rem}.cert-institute{font-size:.72rem}.cert-date{margin-top:14px;padding-top:12px}}
+
+
+/* Final certificate alignment fix */
+.certifications-grid .cert-card .cert-body {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center !important;
+  direction: ltr;
+}
+.certifications-grid .cert-card .cert-body .cert-type,
+.certifications-grid .cert-card .cert-body h3,
+.certifications-grid .cert-card .cert-body .cert-institute,
+.certifications-grid .cert-card .cert-body .cert-date {
+  width: 100%;
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.certifications-grid .cert-card .cert-body .cert-date {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+}
