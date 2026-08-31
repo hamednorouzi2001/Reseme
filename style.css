@@ -160,16 +160,14 @@ body:before{
   letter-spacing:-.065em;
   font-weight:950;
   margin:0 0 16px;
-  color:var(--text);
+  color:var(--text)
+}
+.subtitle{
+  font-size:clamp(.95rem,1.6vw,1.15rem);
   color:var(--text);
   font-weight:850;
   margin-bottom:18px;
-  line-height:1.9;
-  position:relative;
-  padding-bottom:18px
-}
-.subtitle:after{
-  display:none;
+  line-height:1.9
 }
 .intro{
   max-width:610px;
