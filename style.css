@@ -1508,13 +1508,7 @@ footer{
   margin-right: auto !important;
   text-align: center !important;
 }
-.cert-type {
-  color: var(--accent);
-  font-size: .62rem;
-  letter-spacing: .14em;
-  font-weight: 950;
-  margin-bottom: 7px;
-}
+
 .cert-body h3 {
   font-size: 1.2rem;
   line-height: 1.5;
