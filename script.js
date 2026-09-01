@@ -29,7 +29,6 @@ if (certificatesSection) {
           <span class="certificate-view">مشاهده گواهینامه <b>↗</b></span>
         </button>
         <div class="certificate-info">
-          <span class="certificate-kicker">CERTIFICATE</span>
           <h3>Linux Essentials</h3>
           <p>Networking Development Group (NDG)</p>
           <time datetime="2026-07">July 2026</time>
@@ -42,7 +41,6 @@ if (certificatesSection) {
           <span class="certificate-view">مشاهده گواهینامه <b>↗</b></span>
         </button>
         <div class="certificate-info">
-          <span class="certificate-kicker">CERTIFICATE</span>
           <h3>Introduction To Cybersecurity</h3>
           <p>Cisco Networking Academy</p>
           <time datetime="2026-07">July 2026</time>
@@ -62,8 +60,8 @@ if (certificatesSection) {
     #certifications .certificate-view{position:absolute;left:50%;bottom:18px;transform:translate(-50%,10px);opacity:0;display:inline-flex;align-items:center;gap:9px;padding:9px 14px;border:1px solid rgba(255,255,255,.22);border-radius:11px;background:rgba(9,10,13,.82);backdrop-filter:blur(10px);color:#fff;font:800 .72rem/1.2 'Vazirmatn','Segoe UI',sans-serif;white-space:nowrap;transition:.25s ease}
     #certifications .certificate-card:hover .certificate-view{opacity:1;transform:translate(-50%,0)}
     #certifications .certificate-view b{color:var(--accent);font-size:1rem}
-    #certifications .certificate-info{padding:21px 22px 23px;text-align:right}
-    #certifications .certificate-kicker{display:inline-block;color:var(--accent);font-size:.58rem;font-weight:950;letter-spacing:.16em;margin-bottom:6px}
+    #certifications .certificate-info{padding:21px 22px 23px;text-align:center}
+    
     #certifications .certificate-info h3{font-size:1.05rem;line-height:1.65;margin:0 0 5px;font-weight:900}
     #certifications .certificate-info p{margin:0 0 8px;color:var(--muted);font-size:.74rem}
     #certifications .certificate-info time{display:inline-block;color:var(--accent);font-size:.68rem;font-weight:850}
