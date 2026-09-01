@@ -675,14 +675,6 @@ footer{
   margin:0 28px 22px 0;
   padding:12px 4px
 }
-.education-date:after{
-  position:absolute;
-  top:50%;
-  right:calc(50% + 22px);
-  width:28px;
-  height:1px;
-  background:var(--line)
-}
 .education-date strong{
   display:block;
   color:var(--accent);
