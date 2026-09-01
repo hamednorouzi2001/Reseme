@@ -676,7 +676,6 @@ footer{
   padding:12px 4px
 }
 .education-date:after{
-  content:"";
   position:absolute;
   top:50%;
   right:calc(50% + 22px);
