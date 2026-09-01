@@ -1557,3 +1557,29 @@ footer{
   padding: 21px 22px 23px;
   text-align: center;
 }
+
+
+/* Education thesis details */
+.education-detail-divider {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 18px 0 14px;
+}
+.education-details {
+  color: var(--text);
+  font-size: .75rem;
+  line-height: 2;
+}
+.education-details p {
+  margin: 0 0 4px;
+}
+.education-details strong {
+  color: var(--text);
+  font-weight: 850;
+}
+.education-details .supervisor-name {
+  color: var(--muted);
+}
+@media(max-width:560px) {
+  .education-details { font-size: .66rem; }
+}
