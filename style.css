@@ -601,7 +601,7 @@ footer{
 .education-item{
   position:relative;
   display:grid;
-  grid-template-columns:1fr 44px 1fr;
+  grid-template-columns:minmax(0,7fr) 44px minmax(0,3fr);
   align-items:center;
   min-height:155px
 }
@@ -1110,7 +1110,7 @@ footer{
 .career-item{
   position:relative;
   display:grid;
-  grid-template-columns:1fr 44px 1fr;
+  grid-template-columns:minmax(0,7fr) 44px minmax(0,3fr);
   align-items:center;
   min-height:205px
 }
