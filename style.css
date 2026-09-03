@@ -592,7 +592,7 @@ footer{
   position:absolute;
   top:8px;
   bottom:-55px;
-  left:50%;
+  left:calc(70% + 22px);
   transform:translateX(-50%);
   width:2px;
   background:repeating-linear-gradient(to bottom,var(--accent) 0 7px,transparent 7px 15px);
@@ -1101,7 +1101,7 @@ footer{
   position:absolute;
   top:8px;
   bottom:8px;
-  left:50%;
+  left:calc(70% + 22px);
   transform:translateX(-50%);
   width:2px;
   background:repeating-linear-gradient(to bottom,var(--accent) 0 7px,transparent 7px 15px);
