@@ -1655,3 +1655,57 @@ footer{
   font-size: 17px;
   transform: rotate(-25deg);
 }
+
+
+/* Certificate cards: consistent preview frames with subtle, accessible interaction. */
+#certifications .cert-image-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  transition: background-color .2s ease;
+}
+
+#certifications .cert-image-link img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  transition: transform .22s ease;
+}
+
+#certifications .cert-card {
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #certifications .cert-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, .09);
+    border-color: var(--accent);
+  }
+
+  #certifications .cert-image-link:hover img {
+    transform: scale(1.025);
+  }
+}
+
+#certifications .cert-image-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #certifications .cert-card,
+  #certifications .cert-image-link,
+  #certifications .cert-image-link img {
+    transition: none;
+  }
+  #certifications .cert-card:hover {
+    transform: none;
+  }
+  #certifications .cert-image-link:hover img {
+    transform: none;
+  }
+}
