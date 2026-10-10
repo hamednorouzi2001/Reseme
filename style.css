@@ -1576,11 +1576,12 @@ footer{
 }
 
 
-/* Desktop timeline alignment: marker center and dashed axis share one coordinate. */
+/* Desktop timeline alignment: the dashed line passes through each marker center. */
 @media (min-width: 901px) {
   .education-timeline,
   .career-timeline {
-    --timeline-axis: 70%;
+    --timeline-marker-column: 44px;
+    --timeline-axis: calc(70% - 8.8px);
   }
 
   .education-timeline::before,
@@ -1591,7 +1592,7 @@ footer{
 
   .education-item,
   .career-item {
-    grid-template-columns: minmax(0, 70%) 44px minmax(0, 30%);
+    grid-template-columns: minmax(0, 7fr) var(--timeline-marker-column) minmax(0, 3fr);
   }
 
   .education-marker,
@@ -1611,10 +1612,7 @@ footer{
   .career-content { grid-column: 1; }
 
   .education-date,
-  .career-date {
-    grid-column: 3;
-    margin-left: 0;
-  }
+  .career-date { grid-column: 3; }
 }
 
 /* Accurate recognizable social brand icons */
