@@ -1576,23 +1576,25 @@ footer{
 }
 
 
-/* Desktop timeline alignment: the dashed line passes through each marker center. */
+/* Desktop timeline alignment: line and marker column share the exact 70% axis. */
 @media (min-width: 901px) {
   .education-timeline,
   .career-timeline {
     --timeline-marker-column: 44px;
-    --timeline-axis: calc(70% - 8.8px);
   }
 
   .education-timeline::before,
   .career-timeline::before {
-    left: var(--timeline-axis);
+    left: 70%;
     transform: translateX(-50%);
   }
 
   .education-item,
   .career-item {
-    grid-template-columns: minmax(0, 7fr) var(--timeline-marker-column) minmax(0, 3fr);
+    grid-template-columns:
+      minmax(0, calc(70% - 22px))
+      var(--timeline-marker-column)
+      minmax(0, calc(30% - 22px));
   }
 
   .education-marker,
