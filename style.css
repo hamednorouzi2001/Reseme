@@ -1744,3 +1744,213 @@ footer{
     scroll-behavior:auto !important;
   }
 }
+
+/* Typography and spacing system: consistent across the whole portfolio. */
+:root {
+  --space-section: 72px;
+  --space-card: 18px;
+  --radius-card: 18px;
+  --radius-nested: 12px;
+  --text-measure: 68ch;
+  --card-shadow: 0 6px 22px rgba(24, 31, 40, .045);
+}
+body.dark {
+  --card-shadow: 0 6px 22px rgba(0, 0, 0, .16);
+}
+
+/* Use the same Persian font in every component, including controls. */
+html,
+body,
+body *,
+body *::before,
+body *::after {
+  font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  line-height: 1.9;
+}
+
+.hero h1 {
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.intro {
+  max-width: var(--text-measure);
+  line-height: 2;
+}
+
+section {
+  padding-block: var(--space-section);
+}
+
+section > p,
+.book-info p,
+.education-details,
+.career-content li,
+.exp-item li {
+  max-width: var(--text-measure);
+  line-height: 1.95;
+}
+
+h2 {
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+h3,
+.book-info h3,
+.education-content h3,
+.career-content h3,
+.cert-body h3 {
+  line-height: 1.55;
+}
+
+.certifications-grid {
+  gap: var(--space-card);
+  margin-top: 28px;
+}
+
+.education-timeline,
+.career-timeline {
+  margin-top: 28px;
+}
+
+.exp-item,
+.education-content,
+.career-content,
+.cert-card,
+.book-card,
+.focus-box,
+.skill-card,
+.project-card {
+  border-radius: var(--radius-card);
+  box-shadow: var(--card-shadow);
+}
+
+.exp-item,
+.education-content,
+.career-content {
+  padding: var(--space-card);
+}
+
+.education-content,
+.career-content {
+  min-width: 0;
+}
+
+.education-content p,
+.education-details,
+.career-content li,
+.cert-institute,
+.book-info p {
+  overflow-wrap: anywhere;
+}
+
+.education-content p,
+.education-details,
+.career-content li {
+  max-width: var(--text-measure);
+}
+
+.education-content h3,
+.career-content h3,
+.cert-body h3 {
+  margin-top: 8px;
+}
+
+.book-card {
+  gap: 32px;
+  padding: 28px;
+}
+
+.book-info {
+  min-width: 0;
+}
+
+.book-info p {
+  line-height: 1.95;
+}
+
+.cert-card {
+  box-shadow: var(--card-shadow);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #certifications .cert-card:hover {
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .07);
+  }
+}
+
+.social-links {
+  gap: 12px;
+}
+
+footer {
+  max-width: var(--text-measure);
+  margin-inline: auto;
+  line-height: 2;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --space-section: 54px;
+    --space-card: 16px;
+  }
+
+  .book-card {
+    gap: 24px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --space-section: 42px;
+    --space-card: 14px;
+    --radius-card: 15px;
+    --radius-nested: 10px;
+  }
+
+  .hero {
+    padding-bottom: 44px;
+  }
+
+  .hero h1 {
+    line-height: 1.25;
+  }
+
+  section {
+    padding-block: var(--space-section);
+  }
+
+  h2 {
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  .certifications-grid {
+    gap: 16px;
+    margin-top: 22px;
+  }
+
+  .book-card {
+    gap: 18px;
+    padding: 18px 14px;
+  }
+
+  .intro,
+  section > p,
+  .book-info p,
+  .education-details,
+  .career-content li {
+    line-height: 2;
+  }
+}
+
