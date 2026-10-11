@@ -1,22 +1,31 @@
+/* Visual identity: restrained warm accent, clean light surfaces, charcoal dark mode. */
 :root{
-  --bg:#f4f5f7;
-  --panel:#fff;
+  color-scheme: light;
+  --bg:#f3f4f6;
+  --panel:#ffffff;
   --panel2:#f8f9fb;
-  --text:#101318;
-  --muted:#69717d;
+  --text:#17191d;
+  --muted:#626b76;
   --line:#e3e6eb;
-  --accent:#ef7614;
-  --soft:#fff1e4
+  --accent:#c96519;
+  --soft:#fff3e9;
+  --surface-shadow:0 24px 70px rgba(24,31,40,.075);
+  --card-shadow:0 8px 24px rgba(24,31,40,.035);
+  --focus-ring:rgba(201,101,25,.3)
 }
 body.dark{
-  --bg:#090a0d;
-  --panel:#101216;
-  --panel2:#15181d;
-  --text:#f5f6f8;
-  --muted:#9aa2ad;
-  --line:#292d35;
-  --accent:#ff7a18;
-  --soft:#24170d
+  color-scheme: dark;
+  --bg:#101114;
+  --panel:#17191e;
+  --panel2:#1d2026;
+  --text:#f3f4f6;
+  --muted:#a1a7b0;
+  --line:#2d323a;
+  --accent:#f08a3c;
+  --soft:#2b2119;
+  --surface-shadow:0 24px 70px rgba(0,0,0,.25);
+  --card-shadow:0 8px 24px rgba(0,0,0,.13);
+  --focus-ring:rgba(240,138,60,.34)
 }
 *{
   margin:0;
@@ -42,16 +51,18 @@ body:before{
   inset:0;
   z-index:-1;
   pointer-events:none;
-  background:radial-gradient(circle at 85% 4%,rgba(255,122,24,.12),transparent 26%)
+  background:
+    radial-gradient(circle at 88% 2%,color-mix(in srgb,var(--accent) 7%,transparent),transparent 25%),
+    radial-gradient(circle at 8% 96%,color-mix(in srgb,var(--accent) 3%,transparent),transparent 28%)
 }
 .container{
   width:min(1160px,100%);
   margin:auto;
   background:var(--panel);
   border:1px solid var(--line);
-  border-radius:30px;
+  border-radius:26px;
   padding:18px 44px 30px;
-  box-shadow:0 25px 80px rgba(0,0,0,.08)
+  box-shadow:var(--surface-shadow)
 }
 .site-nav{
   position:sticky;
@@ -62,11 +73,11 @@ body:before{
   gap:18px;
   padding:10px 12px;
   margin-bottom:35px;
-  background:color-mix(in srgb,var(--panel) 88%,transparent);
+  background:color-mix(in srgb,var(--panel) 92%,transparent);
   backdrop-filter:blur(18px);
   border:1px solid var(--line);
-  border-radius:17px;
-  box-shadow:0 8px 28px rgba(0,0,0,.06)
+  border-radius:15px;
+  box-shadow:0 8px 24px rgba(0,0,0,.045)
 }
 .brand{
   display:flex;
@@ -1709,5 +1720,27 @@ footer{
   }
   #certifications .cert-image-link:hover img {
     transform: none;
+  }
+}
+
+
+/* Brand consistency and restrained accent usage. */
+:where(a,button,[tabindex]):focus-visible {
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  box-shadow:0 0 0 4px var(--focus-ring);
+}
+
+:where(.cert-card,.education-content,.career-content,.skill-card,.project-card) {
+  box-shadow:var(--card-shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior:auto; }
+  *, *::before, *::after {
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
   }
 }
