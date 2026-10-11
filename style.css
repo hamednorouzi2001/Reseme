@@ -1587,7 +1587,7 @@ footer{
 }
 
 
-/* Desktop timeline alignment: line and marker column share the exact 70% axis. */
+/* Desktop timeline alignment: mirror the dashed line to the opposite side. */
 @media (min-width: 901px) {
   .education-timeline,
   .career-timeline {
@@ -1596,7 +1596,7 @@ footer{
 
   .education-timeline::before,
   .career-timeline::before {
-    left: 70%;
+    left: 30%;
     transform: translateX(-50%);
   }
 
